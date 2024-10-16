@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple webpage</title>
+    <link rel="stylesheet" href="assignment_002.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <div class="main-container">
+      <div class="header__content" id="header__content">
+        <button class="btn-open-menu" id="btn-open-menu" type="button"> <i class="bx bx-menu"></i>
+        </button>
+  
+  
+        <div class="logo">
+          <!-- <i class='bx bxl-xing'></i> -->
+          <!-- <i class='bx bxs-pizza'></i> -->
+          <img src="./cooking.png" alt="logo"> <span id="Bistro"> M2M-Bistro</span>
+          <a href="#Home"></a>
+        </div>
+        <nav>
+          <button class="btn-close-menu" id="btn-close-menu">
+            <i class="bx bx-left-arrow-alt"></i>
+          </button>
+          <ul>
+            <a href="#Home">
+              <li>Home</li>
+            </a>
+            <a href="#">
+              <li>About</li>
+            </a>
+            <a href="#menu">
+              <li>Menu</li>
+            </a>
+            <a href="#">
+              <li>Contact</li>
+            </a>
+  
+          </ul>
+        </nav>
+        <div class="header-menu">
+          <ul id="userShop">
+           
+            <li>
+              <a href="#"><i class='bx bxs-user-circle' id="icons"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class='bx bx-shopping-bag' id="icons"></i></a>
+          </ul>
+          </li>
+        </div>
+      </div> 
+    </div>
+  </header>
+
+     <div class="hero">
+      <div class="hero-content" >
+        <!--<video src="" height="" width="" preload="none" autoplay="autoplay></video>-->
+        <img src="https://images.unsplash.com/photo-1727178392429-b87c025839a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hero_img" />
+       <div class="txt-area">
+         <h2>BienVenue, <br>A Bite From Us Makes You Feel At Home </h2>
+         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt libero  </p>
+         <button type="submit" class="btn" id="btn">Order Now</button>
+       </div>
+       
+      </div>
+     </div>
+      
+<!-- filter options start from here-->
+<div class="filter_section" >
+  <div class="filter-icon" >
+   <button type="button" id="filterToggle"  class="grouped_btn"> <span>Filter</span>  
+    <i class='bx bx-filter'></i></button>
+  
+  </div>
+  <div class="filter-opts">
+    <div class="byName" id="fil-input">
+      <label for="name">Name</label>
+      <input type="text" placeholder="sort by name" name="name" id="name" value="" />
+    </div>
+     
+    <div class="byPrice" id="fil-input">
+     <label for="min">Min</label>
+     <input type="number"  placeholder="min Price" name="min" id="min" value="" />
+    
+    <label for="max">Max</label>
+    <input type="number" placeholder="max Price" name="max" id="max" value="" />
+    </div>
+    
+    <div class="byOpts" id="fil-input">
+      <label for="Sort by">Sort by</label>
+      <select name="Sort by" id="Sort by">
+        <option value="price-asc">Name (A-Z)</option>
+        <option value="price-desc">Name (Z-A)</option>
+        <option value="price-asc">Low to High</option>
+        <option value="price-desc">High to Low</option>
+      </select>
+    </div>
+    <div class="" id="fil-input">
+      <button type="submit" class="grouped_btn">Apply Filter</button>
+    </div>
+    </div>
+</div>
+
+
+<!--filter options end here-->
+
+<!--products listing grid start here-->
+<section class="product-grids" id="menu">
+<!--products cards-->
+<div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://plus.unsplash.com/premium_photo-1721494882159-2643d452986f?q=80&w=1899&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Rice Biryani</p>
+    <h3  id="items-price">$30.00</h3>
+    
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+  <div class="items-actions">
+    <a ><button class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+    <span class="favorite-icon"><i class="bx bx-heart"></i></span>       
+  </div>
+  </div>
+  
+</div>
+<!--products cards-->
+
+<!--products cards-->
+<div class="items-card">
+<div class="img-holder">
+<img id="" src="https://plus.unsplash.com/premium_photo-1673018258915-03fb19c69d72?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D" alt="product-grids" />
+</div>
+<div class="items-info">
+ <p  id="items-name"> Breakfast Fluffy Pie</p>
+<h3  id="items-price">$34.99</h3>
+
+<div class="rating">
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star-half checked" ></span>
+  <span class="bx bx-star checked"></span>
+  <span class="bx bx-star checked"></span>
+</div>
+
+
+<div class="items-actions">
+  <a ><button class="grouped_btn">Place Order</button></a>  
+  <span class="favorite-icon"><i class="bx bx-heart"></i></span>     
+</div>
+</div>
+
+</div>
+<!--products cards-->
+
+<!--products cards-->
+<div class="items-card">
+<div class="img-holder">
+<img id="" src="https://plus.unsplash.com/premium_photo-1674106347910-ba70d236a073?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D" alt="product-grids" />
+</div>
+<div class="items-info">
+ <p  id="items-name"> Tofu Grills</p>
+<h3  id="items-price">$30.99</h3>
+
+<div class="rating">
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked" ></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked"></span>
+</div>
+
+
+<div class="items-actions">
+       <a ><button class="grouped_btn">Place Order</button></a>  
+         <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+     </div>
+</div>
+
+</div>
+<!--products cards-->
+
+<!--products cards-->
+<div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://plus.unsplash.com/premium_photo-1673581152365-788c26c1dad1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Panla veggies Combo</p>
+    <h3  id="items-price">$39.99</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a ><button class="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div>
+<!--products cards-->
+
+ <!--products cards-->
+ <div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://plus.unsplash.com/premium_photo-1674106839177-7585166f86b9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Pasta and Veggies</p>
+    <h3  id="items-price">$54.99</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a ><button class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div>
+<!--products cards-->
+
+<!--products cards-->
+<div class="items-card">
+<div class="img-holder">
+<img id="" src="https://plus.unsplash.com/premium_photo-1674106347987-f3129a3e2333?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8" alt="product-grids" />
+</div>
+<div class="items-info">
+ <p  id="items-name"> Veggies toppings</p>
+<h3  id="items-price">$60.00</h3>
+
+<div class="rating">
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked" ></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star-half checked"></span>
+</div>
+
+
+<div class="items-actions">
+       <a ><button class="grouped_btn">Place Order</button></a>  
+         <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+     </div>
+</div>
+
+</div>
+<!--products cards-->
+
+<!--products cards-->
+<div class="items-card">
+<div class="img-holder">
+<img id="" src="https://plus.unsplash.com/premium_photo-1672363353904-f8f26dd9f956?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8" alt="product-grids" />
+</div>
+<div class="items-info">
+ <p  id="items-name"> Sandwich Salad</p>
+<h3  id="items-price">$24.99</h3>
+
+<div class="rating">
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bx-star checked" ></span>
+  <span class="bx bx-star checked"></span>
+  <span class="bx bx-star checked"></span>
+</div>
+
+
+<div class="items-actions">
+       <a ><button class="grouped_btn">Place Order</button></a>  
+         <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+     </div>
+</div>
+
+</div>
+<!--products cards-->
+
+<!--products cards-->
+<div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://plus.unsplash.com/premium_photo-1673580059866-5b06a848b705?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Fruits Salad</p>
+    <h3  id="items-price">$49.99</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a ><button class="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div>
+<!--products cards-->
+
+<!--products cards-->
+<div class="items-card">
+<div class="img-holder">
+<img id="" src="https://plus.unsplash.com/premium_photo-1664648005432-035f0c45fc6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8" alt="product-grids" />
+</div>
+<div class="items-info">
+ <p  id="items-name"> Creamy fruits and Brocolli Salad</p>
+<h3  id="items-price">$49.99</h3>
+
+<div class="rating">
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked" ></span>
+  <span class="bx bx-star checked"></span>
+  <span class="bx bx-star checked"></span>
+</div>
+
+
+<div class="items-actions">
+       <a ><button class="grouped_btn">Place Order</button></a>  
+         <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+     </div>
+</div>
+
+</div>
+<!--products cards-->
+
+<!--products cards-->
+<div class="items-card">
+<div class="img-holder">
+<img id="" src="https://plus.unsplash.com/premium_photo-1674106838953-deb25f5d3306?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8" alt="product-grids" />
+</div>
+<div class="items-info">
+ <p  id="items-name"> English Lunch(Special Rice meal)</p>
+<h3  id="items-price">$79.99</h3>
+
+<div class="rating">
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star-half checked" ></span>
+  <span class="bx bx-star checked"></span>
+  <span class="bx bx-star checked"></span>
+</div>
+
+
+<div class="items-actions">
+       <a ><button class="grouped_btn">Place Order</button></a>  
+         <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+     </div>
+</div>
+
+</div>
+<!--products cards-->
+
+<!--products cards-->
+<div class="items-card">
+<div class="img-holder">
+<img id="" src="https://plus.unsplash.com/premium_photo-1673581152308-591c1645be02?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI4fHx8ZW58MHx8fHx8" alt="product-grids" />
+</div>
+<div class="items-info">
+ <p  id="items-name"> Omelette meal</p>
+<h3  id="items-price">$59.99</h3>
+
+<div class="rating">
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked" ></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked" ></span>
+</div>
+
+
+<div class="items-actions">
+       <a ><button class="grouped_btn">Place Order</button></a>  
+         <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+     </div>
+</div>
+
+</div>
+<!--products cards-->
+
+
+
+<!--products cards-->
+<div class="items-card">
+<div class="img-holder">
+<img id="" src="https://plus.unsplash.com/premium_photo-1676466892823-60b9f1388758?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExOXx8fGVufDB8fHx8fA%3D%3D" alt="product-grids" />
+</div>
+<div class="items-info">
+ <p  id="items-name">Breakfast Special</p>
+<h3  id="items-price">$99.99</h3>
+
+<div class="rating">
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked"></span>
+  <span class="bx bxs-star checked" ></span>
+  <span class="bx bxs-star-half checked"></span>
+  <span class="bx bx-star checked"></span>
+</div>
+
+<div class="items-actions">
+       <a ><button class="grouped_btn">Place Order</button></a>  
+         <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+     </div>
+</div>
+
+</div>
+<!--products cards-->
+
+</section>
+<!-- end of products listing grid section-->
+
+<!-- start of footer-->
+      <footer>
+        <div class="main-container">
+    <div class="footer">
+     <div class="footer-col">
+      <div class="logo" id="logo-ft">
+        <!-- <i class='bx bxl-xing'></i> -->
+        <img src="./cooking.png" alt="logo">
+        <!-- <span id="Bistro"> M2M-Bistro</span> -->
+        <a href="#Home"></a>
+      </div>
+     
+     <div class="socials" id="socials">
+       
+       <a href="#"><i class="bx bxl-twitter"></i> </a>
+         <a href="#"><i class="bx bxl-facebook"></i> </a>
+           <a href="#"><i class="bx bxl-tiktok"></i> </a>
+             <a href="#"><i class="bx bxl-instagram"></i> </a>
+             <a href="#"><i class="bx bxl-youtube"></i> </a>
+               
+     </div>
+     </div>
+     <div class="footer-col">
+      <div class="footer-header">Shop</div>
+      <ul class="footer-menu" id="footer-ul-menu">
+       <a href="#"> <li>Locate Us</li></a>
+       <a href="#"> <li>Delivery</li></a>
+       <a href="#"> <li></li>Coupon</a>
+       <a href="#"> <li>Feedback</li></a>
+      </ul>
+     </div>
+
+     <div class="footer-col">
+      <div class="footer-header" >Info</div>
+      <ul class="footer-menu">
+       <a href="#"><li>Careers</li></a>
+       <a href="#"><li>News</li></a>
+       <a href="#"> <li>Our Policy</li></a>
+      </ul>
+     </div>
+
+     <div class="footer-col">
+      <div class="footer-header">Contact</div>
+      <ul class="footer-menu">
+        <a href="#"><li>Support</li></a>
+        <a href="#"><li>Contact Us</li></a>
+      </ul>
+      <h5>Subscribe to Our Newsletter</h5>
+      <input id="ft-input" type="email" value="" placeholder="email@email.com">
+      <button type="submit" id="footer-btn" class="grouped_btn">Subscribe to Our Newsletter</button>
+     </div>
+    </div>
+        </div>
+      </footer>
+      <!-- end of footer-->
+  <script src="assignment_002.js"></script>  
+</body>
+
+</html>
