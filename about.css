@@ -1,0 +1,43 @@
+::before,
+::after, *{
+  padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+  
+}
+
+html{
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  scroll-snap-type:y mandatory;
+}
+
+body{
+ background-color: #ffff;  
+ padding-top: 80px;
+ width: min(100%, 100vw);
+}
+
+h2{
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: 2px solid #117554;
+margin-bottom: 2rem;
+}
+
+.info{
+padding: 15px;
+line-height: 2;
+text-overflow: hidden;
+text-indent: 10px;
+
+}
+
+p{
+display:flex;
+justify-content: center;
+align-items: center;
+}

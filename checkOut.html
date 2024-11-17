@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>m2mbistro Checkout</title>
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+<style>
+    body{
+     margin: 0;
+     padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.check-out-container{
+  background-color: #006A67;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding:25px;
+  border-radius: 1rem;
+  line-height: 2;
+  max-width:900px;
+  margin:2rem auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ text-align: center;
+ position: relative;
+ 
+}
+
+
+.check-out-container h4{
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+
+#card-issuer{
+  color: #024CAA;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 5px;
+}
+
+#card-issuer i{
+  border: 1px solid #fff;
+  background: #FFF;
+  border-radius:2px;
+  padding: 2px;
+  width: 3rem;
+  text-align: center;
+}
+
+
+label{
+    display: block;
+  color: #fff;
+ 
+
+}
+.check-out-container #pan-input{
+            padding: 10px; 
+            width: min(100% 15rem);
+            border-radius: 5px; 
+            border: none; 
+            text-align: center;
+        }
+
+.check-out-container input{
+  width:300px ;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.check-out-container #details-input-exp{
+    width: 65px;
+    margin-inline: 1rem;
+    text-align: center;
+}
+
+.check-out-container #details-input-cvv{
+    width: 40px;
+    margin-inline: 1rem;
+    text-align: center;
+}
+
+.check-out-container input::placeholder {
+            color: #7e7e7eb3; 
+        }
+
+#exp-cvv {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  
+}
+
+
+#rgt, #rgt-free{
+    color: #BFECFF;
+}
+
+.lft{
+font-weight: 600;
+}
+
+#price-shipping-info{
+    color: #FFF;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+}
+
+.checkoutPrice{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+#checkout-btn{
+    padding: 10px 15px;
+    width: min(100%, 30rem);
+    border-radius: 5px;
+    border: none;
+    background: none;
+    background-color: #024CAA;
+    color: #FFF;
+    height: 3rem;
+    margin-bottom: 1rem;
+    max-width: none;
+}
+
+#checkout-btn:hover{
+    transform: scale(0.95);
+    background-color: #0465e4;
+    cursor: pointer;
+
+}
+
+@media (max-width:768px) {
+   .check-out-container {
+       width: calc(100% - 40px); 
+       height:auto; 
+       padding-left:10px; 
+       padding-right:10px; 
+   } 
+
+   .check-out-container h4 {
+       margin-bottom: 1rem;
+   }
+
+   .check-out-container input {
+       max-width:none; 
+   }
+
+ 
+   #details-input-exp,
+   #details-input-cvv {
+       width: calc(100% - 20px); 
+       margin-bottom: 10px; 
+   }
+
+   #price-shipping-info {
+       font-size: 1rem; 
+   }
+
+ 
+}
+
+</style>
+
+
+</head>
+  <body>
+  <div class="check-out-container">
+    
+        <h4>Card Details</h4>
+        <div id="card-issuer">
+           <i class='bx bxl-visa'></i>
+         <i class='bx bxl-mastercard'></i>
+         <i class='bx bxl-paypal' ></i>
+        </div>
+         <form action="" method="get" accept-charset="utf-8" id="form">
+          <div class="cardName" id="cardName">
+           <label for="Cardholder's name" id="cardName">Cardholder's Name</label>
+           <input type="text" name=""  value="" placeholder="Cardholder's name" required />
+           
+         </div>
+      <div class="pan" >
+        <label for="Card Number" id="pan"> Card Number</label>
+       <input required maxlength="16" type="text" name="PAN" id="pan-input" class="details-input" value="" placeholder="     1234     4567     8901     2345     6789"/>
+      </div>   
+      <div id="exp-cvv">
+        <div class="exp" >
+          <label for="Expiration" id="Expiration">Expiration</label>
+          <input required maxlength="7" type="text" name="expires" id="details-input-exp" class="details-input"
+            placeholder="MM/YYYY" pattern="^(0[1-9]|1[0-2])\/[0-9]{4}$" oninput="formatInput(this)" />
+    </div>
+      
+      <div class="cvv" >
+        <label for="cvv" id="cvv">CVV</label>
+      <input required maxlength="3" type="password" name="CVV" id="details-input-cvv" value=""  placeholder="***"/>
+      </div>
+       
+       
+       
+      </div> 
+         </form>
+      
+      <div id="price-shipping-info">
+        <div class="checkoutPrice">
+            <p class="lft">Subtotal</p>
+            <p id="rgt" class="rgt"> </p>
+        </div>
+        <div class="checkoutPrice">
+            <p class="lft">Shipping</p>
+            <p id="rgt-free">Free Shipping</p>
+        </div>
+        <div class="checkoutPrice">
+            <p class="lft">Total(incl.Taxes)</p>
+            <p id="rgt" class="rgt" >  </p>
+        </div>
+      
+       </div>
+       
+       <button type="submit" id="checkout-btn" class="checkout-btn"> CHECKOUT &#x27A1;</button>
+        
+    
+   </div>
+
+   <script src="m2mbistro.js"></script>
+</body>
+</html>

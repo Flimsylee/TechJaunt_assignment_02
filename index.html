@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>simple webpage</title>
+    <title>M2M-Bistro- Restaurant, Wine and Dine</title>
     <link rel="stylesheet" href="assignment_002.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+  
   <header>
     <div class="main-container">
+      <!-- contant text animation on top of the homepage -->
+  <div class="animeTxt" id="animeTxt">
+    <div>
+      <p> Contact Us: admin@m2mbistro.com  </p>
+
+    </div>  
+    <p> Or </p> 
+   <div>
+      <p> Call &#9990; : +(123) 456 7890 </p>
+    </div>
+  </div>
+  <!-- contant text animation on top of the homepage -->
       <div class="header__content" id="header__content">
         <button class="btn-open-menu" id="btn-open-menu" type="button"> <i class="bx bx-menu"></i>
         </button>
@@ -23,19 +36,19 @@
         </div>
         <nav>
           <button class="btn-close-menu" id="btn-close-menu">
-            <i class="bx bx-left-arrow-alt"></i>
+            <i class="bx bx-left-arrow-alt"></i> 
           </button>
           <ul>
-            <a href="#Home">
+            <a href="#">
               <li>Home</li>
             </a>
-            <a href="#">
+            <a href="about.html">
               <li>About</li>
             </a>
             <a href="#menu">
               <li>Menu</li>
             </a>
-            <a href="#">
+            <a href="contact_us.html">
               <li>Contact</li>
             </a>
   
@@ -45,10 +58,14 @@
           <ul id="userShop">
            
             <li>
-              <a href="#"><i class='bx bxs-user-circle' id="icons"></i></a>
+              <a href="sign-in.html"><i class='bx bxs-user-circle' id="icons"></i></a>
             </li>
             <li>
-              <a href="#"><i class='bx bx-shopping-bag' id="icons"></i></a>
+              <a href="cart.html"  class="notification" id="notification">
+                <span><i class='bx bx-shopping-bag' id="icons"></i></span>
+                <span id="badge">0</span>
+                
+              </a>
           </ul>
           </li>
         </div>
@@ -63,7 +80,7 @@
        <div class="txt-area">
          <h2>BienVenue, <br>A Bite From Us Makes You Feel At Home </h2>
          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt libero  </p>
-         <button type="submit" class="btn" id="btn">Order Now</button>
+         <button type="submit" class="btn" id="btn" > <a href="#menu"> Order Now </a></button>
        </div>
        
       </div>
@@ -110,7 +127,7 @@
 
 <!--products listing grid start here-->
 <section class="product-grids" id="menu">
-<!--products cards-->
+<!--products cards 1-->
 <div class="items-card">
   <div class="img-holder">
     <img id="" src="https://plus.unsplash.com/premium_photo-1721494882159-2643d452986f?q=80&w=1899&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="product-grids" />
@@ -136,7 +153,7 @@
 </div>
 <!--products cards-->
 
-<!--products cards-->
+<!--products cards 2-->
 <div class="items-card">
 <div class="img-holder">
 <img id="" src="https://plus.unsplash.com/premium_photo-1673018258915-03fb19c69d72?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D" alt="product-grids" />
@@ -155,7 +172,7 @@
 
 
 <div class="items-actions">
-  <a ><button class="grouped_btn">Place Order</button></a>  
+  <a ><button class="grouped_btn" id="grouped_btn">Place Order</button></a>  
   <span class="favorite-icon"><i class="bx bx-heart"></i></span>     
 </div>
 </div>
@@ -163,7 +180,7 @@
 </div>
 <!--products cards-->
 
-<!--products cards-->
+<!--products cards 3-->
 <div class="items-card">
 <div class="img-holder">
 <img id="" src="https://plus.unsplash.com/premium_photo-1674106347910-ba70d236a073?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D" alt="product-grids" />
@@ -182,7 +199,7 @@
 
 
 <div class="items-actions">
-       <a ><button class="grouped_btn">Place Order</button></a>  
+       <a ><button id="grouped_btn" class="grouped_btn">Place Order</button></a>  
          <span class="favorite-icon"><i class="bx bx-heart"></i></span>
      </div>
 </div>
@@ -190,14 +207,14 @@
 </div>
 <!--products cards-->
 
-<!--products cards-->
-<div class="items-card">
+<!--products cards 4-->
+ <div class="items-card">
   <div class="img-holder">
-    <img id="" src="https://plus.unsplash.com/premium_photo-1673581152365-788c26c1dad1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8" alt="product-grids" />
+    <img id="" src="https://plus.unsplash.com/premium_photo-1728412897664-e7587de51ecf?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="product-grids" />
   </div>
   <div class="items-info">
-     <p  id="items-name"> Panla veggies Combo</p>
-    <h3  id="items-price">$39.99</h3>
+     <p  id="items-name"> Chicken & Pie</p>
+    <h3  id="items-price">$79.99</h3>
 
     <div class="rating">
       <span class="bx bxs-star checked"></span>
@@ -209,7 +226,35 @@
 
 
   <div class="items-actions">
-           <a ><button class="grouped_btn">Place Order</button></a>  
+           <a><button  class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div> 
+<!--products cards-->
+
+
+ <!--products cards 5-->
+ <div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Zm9vZCUyMGFuZCUyMGRyaW5rfGVufDB8fDB8fHww" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Custom Mojito</p>
+    <h3  id="items-price">$19.99</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a ><button  class="grouped_btn" id="grouped_btn">Place Order</button></a>  
              <span class="favorite-icon"><i class="bx bx-heart"></i></span>
          </div>
   </div>
@@ -217,7 +262,7 @@
 </div>
 <!--products cards-->
 
- <!--products cards-->
+ <!--products cards 6-->
  <div class="items-card">
   <div class="img-holder">
     <img id="" src="https://plus.unsplash.com/premium_photo-1674106839177-7585166f86b9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8" alt="product-grids" />
@@ -236,7 +281,7 @@
 
 
   <div class="items-actions">
-           <a ><button class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+           <a ><button  class="grouped_btn" id="grouped_btn">Place Order</button></a>  
              <span class="favorite-icon"><i class="bx bx-heart"></i></span>
          </div>
   </div>
@@ -244,7 +289,7 @@
 </div>
 <!--products cards-->
 
-<!--products cards-->
+<!--products cards 7-->
 <div class="items-card">
 <div class="img-holder">
 <img id="" src="https://plus.unsplash.com/premium_photo-1674106347987-f3129a3e2333?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8" alt="product-grids" />
@@ -263,7 +308,7 @@
 
 
 <div class="items-actions">
-       <a ><button class="grouped_btn">Place Order</button></a>  
+       <a ><button id="grouped_btn" class="grouped_btn">Place Order</button></a>  
          <span class="favorite-icon"><i class="bx bx-heart"></i></span>
      </div>
 </div>
@@ -271,7 +316,7 @@
 </div>
 <!--products cards-->
 
-<!--products cards-->
+<!--products cards 8-->
 <div class="items-card">
 <div class="img-holder">
 <img id="" src="https://plus.unsplash.com/premium_photo-1672363353904-f8f26dd9f956?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8" alt="product-grids" />
@@ -290,7 +335,7 @@
 
 
 <div class="items-actions">
-       <a ><button class="grouped_btn">Place Order</button></a>  
+       <a ><button id="grouped_btn" class="grouped_btn">Place Order</button></a>  
          <span class="favorite-icon"><i class="bx bx-heart"></i></span>
      </div>
 </div>
@@ -298,7 +343,7 @@
 </div>
 <!--products cards-->
 
-<!--products cards-->
+<!--products cards 9-->
 <div class="items-card">
   <div class="img-holder">
     <img id="" src="https://plus.unsplash.com/premium_photo-1673580059866-5b06a848b705?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8" alt="product-grids" />
@@ -317,7 +362,7 @@
 
 
   <div class="items-actions">
-           <a ><button class="grouped_btn">Place Order</button></a>  
+           <a ><button id="grouped_btn" class="grouped_btn">Place Order</button></a>  
              <span class="favorite-icon"><i class="bx bx-heart"></i></span>
          </div>
   </div>
@@ -325,7 +370,7 @@
 </div>
 <!--products cards-->
 
-<!--products cards-->
+<!--products cards 10-->
 <div class="items-card">
 <div class="img-holder">
 <img id="" src="https://plus.unsplash.com/premium_photo-1664648005432-035f0c45fc6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8" alt="product-grids" />
@@ -344,7 +389,7 @@
 
 
 <div class="items-actions">
-       <a ><button class="grouped_btn">Place Order</button></a>  
+       <a ><button itemid="grouped_btn" class="grouped_btn" id="grouped_btn">Place Order</button></a>  
          <span class="favorite-icon"><i class="bx bx-heart"></i></span>
      </div>
 </div>
@@ -352,13 +397,13 @@
 </div>
 <!--products cards-->
 
-<!--products cards-->
+<!--products cards 11-->
 <div class="items-card">
 <div class="img-holder">
 <img id="" src="https://plus.unsplash.com/premium_photo-1674106838953-deb25f5d3306?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8" alt="product-grids" />
 </div>
 <div class="items-info">
- <p  id="items-name"> English Lunch(Special Rice meal)</p>
+ <p  id="items-name"> Special Rice</p>
 <h3  id="items-price">$79.99</h3>
 
 <div class="rating">
@@ -371,7 +416,7 @@
 
 
 <div class="items-actions">
-       <a ><button class="grouped_btn">Place Order</button></a>  
+       <a ><button class="grouped_btn" id="grouped_btn">Place Order</button></a>  
          <span class="favorite-icon"><i class="bx bx-heart"></i></span>
      </div>
 </div>
@@ -379,7 +424,7 @@
 </div>
 <!--products cards-->
 
-<!--products cards-->
+<!--products cards 12-->
 <div class="items-card">
 <div class="img-holder">
 <img id="" src="https://plus.unsplash.com/premium_photo-1673581152308-591c1645be02?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI4fHx8ZW58MHx8fHx8" alt="product-grids" />
@@ -398,7 +443,7 @@
 
 
 <div class="items-actions">
-       <a ><button class="grouped_btn">Place Order</button></a>  
+       <a ><button class="grouped_btn" id="grouped_btn">Place Order</button></a>  
          <span class="favorite-icon"><i class="bx bx-heart"></i></span>
      </div>
 </div>
@@ -406,9 +451,7 @@
 </div>
 <!--products cards-->
 
-
-
-<!--products cards-->
+<!--products cards 13-->
 <div class="items-card">
 <div class="img-holder">
 <img id="" src="https://plus.unsplash.com/premium_photo-1676466892823-60b9f1388758?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExOXx8fGVufDB8fHx8fA%3D%3D" alt="product-grids" />
@@ -426,13 +469,204 @@
 </div>
 
 <div class="items-actions">
-       <a ><button class="grouped_btn">Place Order</button></a>  
+       <a ><button class="grouped_btn" id="grouped_btn">Place Order</button></a>  
          <span class="favorite-icon"><i class="bx bx-heart"></i></span>
      </div>
 </div>
 
 </div>
 <!--products cards-->
+
+<!--products cards 14-->
+<div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://plus.unsplash.com/premium_photo-1673581152365-788c26c1dad1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Panla veggies</p>
+    <h3  id="items-price">$39.99</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a><button  class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div>
+<!--products cards 14-->
+
+<!--products cards 15-->
+<div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://images.unsplash.com/photo-1506802913710-40e2e66339c9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZCUyMGFuZCUyMGRyaW5rfGVufDB8fDB8fHww" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Panla veggies</p>
+    <h3  id="items-price">$39.99</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a><button  class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div>
+<!--products cards-->
+
+<!--products cards 16-->
+<div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://plus.unsplash.com/premium_photo-1676313449501-8ed94e22a65b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Potatoes Alfredo</p>
+    <h3  id="items-price">$25.00</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a><button  class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div>
+<!--products cards-->
+
+<!--products cards 17-->
+<div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://images.unsplash.com/photo-1577805947697-89e18249d767?q=80&w=1898&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> MilkShake</p>
+    <h3  id="items-price">$40.00</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a ><button  class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div>
+<!--products cards-->
+
+<!--products cards 18-->
+<div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://plus.unsplash.com/premium_photo-1672976509033-cfc634f57047?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Tacos</p>
+    <h3  id="items-price">$29.99</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a ><button  class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div>
+<!--products cards-->
+
+<!--products cards 19--> 
+<div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvb2QlMjBhbmQlMjBkcmlua3xlbnwwfHwwfHx8MA%3D%3D" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Pancake</p>
+    <h3  id="items-price">$12.00</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a ><button  class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div>
+<!--products cards-->
+
+
+<!--products cards 20-->
+<div class="items-card">
+  <div class="img-holder">
+    <img id="" src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="product-grids" />
+  </div>
+  <div class="items-info">
+     <p  id="items-name"> Strawberry Juice</p>
+    <h3  id="items-price">$14.99</h3>
+
+    <div class="rating">
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked"></span>
+      <span class="bx bxs-star checked" ></span>
+      <span class="bx bxs-star-half checked"></span>
+      <span class="bx bx-star checked"></span>
+    </div>
+
+
+  <div class="items-actions">
+           <a ><button  class="grouped_btn" id="grouped_btn">Place Order</button></a>  
+             <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+         </div>
+  </div>
+  
+</div>
+<!--products cards-->
+
 
 </section>
 <!-- end of products listing grid section-->
@@ -451,20 +685,20 @@
      
      <div class="socials" id="socials">
        
-       <a href="#"><i class="bx bxl-twitter"></i> </a>
-         <a href="#"><i class="bx bxl-facebook"></i> </a>
-           <a href="#"><i class="bx bxl-tiktok"></i> </a>
-             <a href="#"><i class="bx bxl-instagram"></i> </a>
-             <a href="#"><i class="bx bxl-youtube"></i> </a>
+       <a href="https://x.com/__moon2mean"><i class="bx bxl-twitter"></i> </a>
+         <a href="https://facebook.com"><i class="bx bxl-facebook"></i> </a>
+           <a href="https://tiktok.com"><i class="bx bxl-tiktok"></i> </a>
+             <a href="https://instgram.com"><i class="bx bxl-instagram"></i> </a>
+             <a href="https://wa.me/22968518277"><i class="bx bxl-whatsapp"></i> </a>
                
      </div>
      </div>
      <div class="footer-col">
       <div class="footer-header">Shop</div>
       <ul class="footer-menu" id="footer-ul-menu">
-       <a href="#"> <li>Locate Us</li></a>
+       <a href="https://earth.google.com/web/"> <li>Locate Us</li></a>
        <a href="#"> <li>Delivery</li></a>
-       <a href="#"> <li></li>Coupon</a>
+       <a href="#" id="coupon-code"> <li></li>Coupon</a>
        <a href="#"> <li>Feedback</li></a>
       </ul>
      </div>
@@ -473,7 +707,7 @@
       <div class="footer-header" >Info</div>
       <ul class="footer-menu">
        <a href="#"><li>Careers</li></a>
-       <a href="#"><li>News</li></a>
+       <a href="https://news.google.com/home?hl=en"><li>News</li></a>
        <a href="#"> <li>Our Policy</li></a>
       </ul>
      </div>
@@ -481,18 +715,43 @@
      <div class="footer-col">
       <div class="footer-header">Contact</div>
       <ul class="footer-menu">
-        <a href="#"><li>Support</li></a>
-        <a href="#"><li>Contact Us</li></a>
+        <a href="support.html"><li>Support</li></a>
+        <a href="contact_us.css"><li>Contact Us</li></a>
       </ul>
       <h5>Subscribe to Our Newsletter</h5>
-      <input id="ft-input" type="email" value="" placeholder="email@email.com">
+      <input id="ft-input" type="email" value="" name="email" placeholder="email@email.com">
       <button type="submit" id="footer-btn" class="grouped_btn">Subscribe →</button>
      </div>
     </div>
         </div>
+
+        <div class="copyright">
+          <p style="color: aliceblue; text-align: center; padding-bottom: 5px;"> 
+           &copy; 2024 Moon2mean.dev. All rights reserved</p>
+         </div>
       </footer>
+      
       <!-- end of footer-->
-  <script src="assignment_002.js"></script>  
+
+<!--this is the begining of the html structure for the subscribe pop card-->
+       <!-- start of Pop tab-->
+   <div id="msg_container" class="msg_container">
+    <div id="pop-msg">
+      <div class="close-btn" id="close-btn">
+        &times
+      </div>
+      <p id="pop_txt">Subsribe to Our newsletter</p>
+      <input type="email" name="email" id="data-input" value="" placeholder="enter your e-mail address" />
+      <input type="submit" name="" id="subs" value="Subscribe &rarr;" />
+      
+    </div>
+  </div>
+  <!-- end of Pop tab-->
+
+  <!-- <div class="added-items" id="added-items">
+     
+  </div> -->
+  <script src="m2mbistro.js"></script>  
 </body>
 
 </html>
