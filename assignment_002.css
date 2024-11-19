@@ -66,6 +66,7 @@ body{
     z-index: 1;
 }
 
+ 
 @keyframes scroll {
   0%{
     transform: translateX(100%);

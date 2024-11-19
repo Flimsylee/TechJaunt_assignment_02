@@ -186,23 +186,23 @@ font-weight: 600;
          <form action="" method="get" accept-charset="utf-8" id="form">
           <div class="cardName" id="cardName">
            <label for="Cardholder's name" id="cardName">Cardholder's Name</label>
-           <input type="text" name=""  value="" placeholder="Cardholder's name" required />
+           <input type="text" oninput="formatCardName(this)" name=""  value="" placeholder="Cardholder's name" required />
            
          </div>
       <div class="pan" >
         <label for="Card Number" id="pan"> Card Number</label>
-       <input required maxlength="16" type="text" name="PAN" id="pan-input" class="details-input" value="" placeholder="     1234     4567     8901     2345     6789"/>
+       <input required  pattern="^(^[0-9\s])$" oninput="formatCardPan(this)" type="text" name="PAN" id="pan-input" class="details-input" value="" placeholder="     1234     4567     8901     2345     6789"/>
       </div>   
       <div id="exp-cvv">
         <div class="exp" >
           <label for="Expiration" id="Expiration">Expiration</label>
           <input required maxlength="7" type="text" name="expires" id="details-input-exp" class="details-input"
-            placeholder="MM/YYYY" pattern="^(0[1-9]|1[0-2])\/[0-9]{4}$" oninput="formatInput(this)" />
+            placeholder="MM/YYYY" pattern="^(0[1-9]|1[0-2])\/[0-9]{4}$" oninput="formatExpirationInput(this)" />
     </div>
       
       <div class="cvv" >
         <label for="cvv" id="cvv">CVV</label>
-      <input required maxlength="3" type="password" name="CVV" id="details-input-cvv" value=""  placeholder="***"/>
+      <input required maxlength="3" pattern="^(^[0-9\s])$" oninput="cvvFormat(this)" type="password" name="CVV" id="details-input-cvv" value=""  placeholder="***"/>
       </div>
        
        

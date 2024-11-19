@@ -14,7 +14,7 @@ font-family:'Roboto', San-Serif;
   --green-color:#4caf50;
   --border-color:#b0bec5;
   --input-color:#6b6b6b;
-  
+  --bg-bgcolor:#ddd;
 }
 
 body{
@@ -22,7 +22,7 @@ font-size:1rem;
  font-family:'Roboto', San-Serif ;
   margin:0;
   padding:0;
-  background-color:var(--bg-color)
+  background-color:var(--bg-bgcolor)
 }
 
 h1{

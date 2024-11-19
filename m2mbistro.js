@@ -241,62 +241,111 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // coupon link from homepage
-// s
-
-
-
-
-    
-//     const ProceedToCheckout = document.getElementById('proceed');
-//    ProceedToCheckout.addEventListener('click', function(){
-//      window.location.href ='checkOut.html'; 
-//     console.log("clicked");
-       
-//   }); // 2nd to last enclosure
-  
-
-//   }); //enclose end
+function CoupouLookUp(couponYesNo){
+    const couponYesNo = document.getElementById("coupon-code");
+    couponYesNo.addEventListener('click', ()=>{
+        alert('No available coupon code, check back later or request for one.');
+    });
+}
+   
+   
 
 
 
  //  event-listener for the checkout button
+ function validateForm() {
+    const form = document.querySelector('form');
+    if (!form) return false;
 
- Window.onload = function(){
+    const inputs = form.querySelectorAll('input');
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            isValid = false;
+            input.style.borderColor = 'red';
+        } else {
+            input.style.borderColor = '';
+        }
+    });
+
+    if (!isValid) {
+        alert('Please fill in all fields');
+    }
+
+    return isValid;
+}
+
+
+//  Window.onload = function(){
     document.addEventListener('DOMContentLoaded', ()=>{
         const checkOut = document.getElementById('checkout-btn');
         checkOut.addEventListener('click', ()=>{
             console.log('checkedout');
-             
-        })
+            //  e.preventDefault();
+            if (!window.location.href == "checkOut.html" && "gotocheckout.js"){
+                return;
+            }
+             else if (validateForm()) {
+                    alert('Order placed successfully!');
+                    cart = [];
+                    updateCart();
+                    window.location.href = 'index.html';
+                 } 
+             });
+        });
     
-     });
+    //  });
     
- }
+//  }
  
 
 
 //  functionality to validate the checkout form
-
  const cardNumberInput = document.getElementById('pan-input');
  const cvvInput = document.getElementById('details-input-cvv');
  const expirationInput = document.getElementById('details-input-exp');
+ const cardholderName = document.getElementById('cardName');
 
-    cardNumberInput.onkeydown = function(event) {
-        if (isNaN(event.key) && event.key !== 'Backspace') {
-            event.preventDefault();
-        };
+ function formatCardName(cardholderName){
+    cardholderName.style.color = "#1A1A19"
+    cardholderName.style.textTransform = "uppercase"
+ }
     
-     };  
-
-     cvvInput.onkeydown = (e)=>{
-        if(isNaN(e.key) && e.key !== "Backspace") {
-            e.preventDefault();
+    function formatCardPan(cardNumberInput) {
+        // Remove all non-digit characters
+        let value = cardNumberInput.value.replace(/\D/g, '');
+        cardNumberInput.style.fontWeight ="bold";
+        cardNumberInput.style.color="#1A1A19"
+        // Limit the length to 20 digits
+        if (value.length > 16) {
+            value = value.slice(0, 16);
         }
-     };
+    
+        // Add a space after every 4 digits
+        value = value.replace(/(.{4})/g, '$1 ').trim();
+    
+        // Update the input value with the formatted number
+        cardNumberInput.value = value;
+    }
 
-     function formatInput(input) {
+    function cvvFormat(cvvInput) {
+        // Remove all non-digit characters
+        let value = cvvInput.value.replace(/\D/g, '');
+        // cardNumberInput.style.fontWeight ="bold";
+        // cardNumberInput.style.color="#1A1A19"
+        // Limit the length to 20 digits
+        if (value.length > 3) {
+            value = value.slice(0, 3);
+        }
+    
+        // Update the input value with the formatted number
+        cvvInput.value = value;
+    }
+
+     function formatExpirationInput(expirationInput) {
         
-        let value = input.value.replace(/[^0-9]/g, ''); 
+        let value = expirationInput.value.replace(/[^0-9]/g, ''); 
         if (value.length >= 2) {
             value = value.slice(0, 2) + '/' + value.slice(2); 
         }
@@ -306,8 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //     value = value.slice(0, 7);
         // }
 
-        input.value = value;
+        expirationInput.value = value;
     }
-  
 
    
