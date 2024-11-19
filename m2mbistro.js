@@ -241,13 +241,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // coupon link from homepage
-function CoupouLookUp(couponYesNo){
+
     const couponYesNo = document.getElementById("coupon-code");
     couponYesNo.addEventListener('click', ()=>{
         alert('No available coupon code, check back later or request for one.');
     });
-}
-   
    
 
 
