@@ -206,6 +206,15 @@ function showPrice() {
         };
      
 
+
+        // function to hide header top text animation on homepage.
+    function hideElement() {
+        const element = document.getElementById('animeTxt');
+        element.style.display = 'none'; 
+    }
+    // Set a timeout to hide the element after the animation duration
+    setTimeout(hideElement, 60000); 
+
 // Pop-up message functionality
 
 document.addEventListener('DOMContentLoaded', () => {
